@@ -1,0 +1,15 @@
+VIONZA SOLUÇÕES — MVP DO SITE (v3)
+
+Melhorias implementadas:
+- visual mais autoral e menos genérico;
+- seção demonstrativa de portfólio;
+- provas de confiança na abertura;
+- preços não expostos diretamente;
+- botões 'Confira valores';
+- balão flutuante de WhatsApp;
+- pré-filtro de necessidade antes de abrir a conversa;
+- formulário preparado para abrir mensagem no WhatsApp.
+
+WhatsApp configurado: +55 11 98850-4240
+
+Nenhum domínio, hospedagem ou serviço pago foi contratado.

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vionza Soluções — Sites, IA e Compras B2B</title>
+<meta name="description" content="Sites profissionais, soluções com IA e pesquisa de fornecedores para pequenas empresas. Tecnologia, clareza e custo acessível.">
+<style>
+:root{
+  --bg:#07111f; --bg2:#0b1728; --card:#0f2035; --line:#203550;
+  --text:#f6f8fb; --muted:#a8b5c7; --accent:#55d7ff; --accent2:#7c6cff;
+  --success:#66e3a4;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:
+radial-gradient(circle at 18% 0%, rgba(85,215,255,.06), transparent 34%),
+radial-gradient(circle at 82% 8%, rgba(124,108,255,.07), transparent 30%),
+var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.navbar{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.35rem;font-weight:800;letter-spacing:.2px}
+.brand span{background:linear-gradient(90deg,var(--accent),#b6a8ff);-webkit-background-clip:text;color:transparent}
+.menu{display:flex;gap:24px;color:var(--muted);font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:13px 18px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-primary{background:#eaf7fb;color:#07111f}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.02)}
+.hero{padding:96px 0 70px}
+.hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:42px;align-items:center}
+.eyebrow{display:inline-block;padding:7px 11px;border:1px solid #26415f;border-radius:999px;color:#b9d9ee;font-size:.82rem;margin-bottom:20px;background:rgba(85,215,255,.05)}
+h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.02;margin:0 0 22px;letter-spacing:-2.5px}
+.gradient{background:linear-gradient(90deg,var(--accent),#b6a8ff);-webkit-background-clip:text;color:transparent}
+.lead{font-size:1.16rem;color:var(--muted);max-width:700px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-card{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 30px 80px rgba(0,0,0,.28)}
+.metric{display:flex;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.metric:last-child{border:0}
+.metric b{font-size:1.25rem}.metric span{color:var(--muted)}
+section{padding:78px 0}
+.section-head{max-width:720px;margin-bottom:34px}
+.section-head h2{font-size:clamp(2rem,4vw,3.2rem);margin:0 0 12px;letter-spacing:-1.4px}
+.section-head p{color:var(--muted);margin:0}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(15,32,53,.78);border:1px solid var(--line);border-radius:20px;padding:26px}
+.icon{font-size:1.55rem;margin-bottom:14px}
+.card h3{margin:0 0 10px;font-size:1.25rem}
+.card p{color:var(--muted);margin:0 0 18px}
+.tag{display:inline-block;font-size:.76rem;border:1px solid #2b4565;border-radius:999px;padding:6px 9px;color:#b7c8db;margin:3px}
+.price{font-size:2rem;font-weight:800;margin:15px 0 4px}
+.small{font-size:.88rem;color:var(--muted)}
+.quote{background:#0b1728;border:1px solid var(--line);border-radius:24px;padding:28px}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+label{display:block;font-size:.9rem;color:#c7d3e1;margin:14px 0 7px}
+select,input,textarea{width:100%;background:#081421;color:var(--text);border:1px solid #29405d;border-radius:11px;padding:12px 13px;font:inherit;outline:none}
+textarea{min-height:120px;resize:vertical}
+.result{background:#081421;border:1px solid #29405d;border-radius:16px;padding:20px;align-self:start}
+.result .big{font-size:2.4rem;font-weight:800;margin:6px 0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;color:#cbd6e3}
+.check{background:rgba(255,255,255,.03);padding:11px 12px;border-radius:10px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{padding:22px;border-top:2px solid #284564;background:rgba(255,255,255,.025);border-radius:0 0 14px 14px}
+.step b{display:block;margin-bottom:8px}
+.step span{color:var(--muted);font-size:.93rem}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:26px}
+.notice{padding:14px;border-radius:12px;background:rgba(102,227,164,.08);border:1px solid rgba(102,227,164,.28);color:#c8f5df;font-size:.9rem;margin-top:16px;display:none}
+footer{border-top:1px solid rgba(255,255,255,.07);padding:28px 0 40px;color:#8796aa;font-size:.9rem}
+@media(max-width:850px){
+  .hero-grid,.quote-grid,.contact{grid-template-columns:1fr}
+  .grid-3,.steps{grid-template-columns:1fr}
+  .menu{display:none}
+  .hero{padding-top:66px}
+}
+
+/* Refinamentos visuais */
+.hero-card,.card,.quote,.result{box-shadow:0 18px 48px rgba(0,0,0,.14)}
+.section-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:#8fa7bd;margin-bottom:9px;font-weight:700}
+.trustbar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.trustitem{border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);padding:13px 14px;border-radius:12px;color:#bac7d5;font-size:.9rem}
+.brandmark{display:inline-flex;align-items:center;gap:10px}
+.brand-dot{width:11px;height:11px;border-radius:3px;background:linear-gradient(135deg,var(--accent),#a99cff);transform:rotate(45deg);display:inline-block}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.work-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#0b1828}
+.work-preview{height:170px;padding:22px;background:
+linear-gradient(135deg,rgba(85,215,255,.08),rgba(124,108,255,.05)),
+#091522;display:flex;flex-direction:column;justify-content:space-between}
+.work-preview .fakebar{height:9px;width:44%;background:#d7e9f0;border-radius:999px;opacity:.75}
+.work-preview .fakehero{font-weight:800;font-size:1.45rem;line-height:1.1;max-width:85%}
+.work-body{padding:19px}
+.work-body p{color:var(--muted);margin:5px 0 0;font-size:.92rem}
+
+.whatsapp-float{
+position:fixed;right:22px;bottom:22px;z-index:50;
+width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;
+display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;
+background:#f0fff6;color:#0b2a1a;box-shadow:0 14px 40px rgba(0,0,0,.3)
+}
+.whatsapp-float:hover{transform:translateY(-2px)}
+.wa-label{
+position:fixed;right:92px;bottom:31px;z-index:49;background:#eaf7fb;color:#07111f;
+padding:10px 14px;border-radius:999px;font-size:.86rem;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+.modal-backdrop{
+position:fixed;inset:0;background:rgba(2,8,16,.72);backdrop-filter:blur(6px);
+display:none;align-items:center;justify-content:center;padding:20px;z-index:80
+}
+.modal{width:min(560px,100%);background:#0b1728;border:1px solid #29405d;border-radius:22px;padding:24px;box-shadow:0 30px 90px rgba(0,0,0,.45)}
+.modal h3{margin:0 0 6px;font-size:1.5rem}
+.modal p{margin:0 0 14px;color:var(--muted)}
+.modal-actions{display:flex;gap:10px;margin-top:16px}
+.modal-actions .btn{flex:1}
+.close-x{float:right;background:transparent;color:#a9b6c7;border:0;font-size:24px;cursor:pointer}
+.helper{font-size:.8rem;color:#8292a6;margin-top:7px}
+@media(max-width:850px){
+ .trustbar,.portfolio-grid{grid-template-columns:1fr}
+ .wa-label{display:none}
+ .whatsapp-float{right:16px;bottom:16px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navbar">
+    <a class="brand brandmark" href="#"><span class="brand-dot"></span><span>VIONZA</span> SOLUÇÕES</a>
+    <div class="menu">
+      <a href="#servicos">Serviços</a><a href="#portfolio">Exemplos</a><a href="#pacotes">Pacotes</a><a href="#orcamento">Orçamento</a><a href="#contato">Contato</a>
+    </div>
+    <a class="btn btn-primary" href="#orcamento">Quero um orçamento</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Sites, conteúdo e apoio comercial para pequenas empresas</div>
+      <h1>Sua empresa mais <span class="gradient">profissional no digital e mais eficiente no dia a dia.</span></h1>
+      <p class="lead">Criamos sites, materiais de divulgação e apoiamos pesquisas de fornecedores para empresas que precisam ganhar tempo, melhorar a apresentação e vender com mais confiança.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#orcamento">Entender qual serviço faz sentido</a>
+        <a class="btn btn-ghost" href="#servicos">Ver como podemos ajudar</a>
+      </div>
+    
+      <div class="trustbar">
+        <div class="trustitem">✓ Atendimento direto, sem intermediários</div>
+        <div class="trustitem">✓ Escopo explicado antes de começar</div>
+        <div class="trustitem">✓ Soluções pensadas para pequenas empresas</div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="small">Em que podemos ajudar</div>
+      <div class="metric"><span>🌐 Site e presença digital</span><b>Profissional</b></div>
+      <div class="metric"><span>✦ Conteúdo e materiais</span><b>Prático</b></div>
+      <div class="metric"><span>📊 Pesquisa e cotações</span><b>Organizado</b></div>
+      <div class="metric"><span>💬 Atendimento próximo</span><b>Sem enrolação</b></div>
+    </aside>
+  </div>
+</header>
+
+<section id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <h2>Soluções simples para necessidades reais da sua empresa.</h2>
+      <p>Você pode começar por um serviço pontual e evoluir aos poucos. A ideia é entregar o que realmente faz sentido para o seu momento.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <div class="icon">🌐</div><h3>Sites profissionais</h3>
+        <p>Sites institucionais e páginas de apresentação para deixar sua empresa mais profissional e facilitar pedidos de orçamento e contatos pelo WhatsApp.</p>
+        <span class="tag">Responsivo</span><span class="tag">WhatsApp</span><span class="tag">SEO básico</span>
+      </article>
+      <article class="card">
+        <div class="icon">🤖</div><h3>Conteúdo e materiais</h3>
+        <p>Artes, tratamento de imagens, textos, catálogos e materiais comerciais para melhorar a forma como sua empresa se apresenta.</p>
+        <span class="tag">Artes</span><span class="tag">Imagens</span><span class="tag">Textos</span>
+      </article>
+      <article class="card">
+        <div class="icon">📊</div><h3>Pesquisa e cotação B2B</h3>
+        <p>Pesquisa de fornecedores, comparação de preços e especificações e organização das melhores opções para apoiar suas compras.</p>
+        <span class="tag">Fornecedores</span><span class="tag">Comparação</span><span class="tag">Sourcing</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section id="portfolio">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Exemplos de aplicação</div>
+      <h2>Uma apresentação melhor já muda a percepção do cliente.</h2>
+      <p>Estes exemplos mostram o tipo de trabalho que podemos desenvolver para pequenos negócios. Os projetos abaixo são demonstrativos e serão substituídos por cases reais conforme a Vionza ganhar clientes.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="work-card">
+        <div class="work-preview">
+          <div class="fakebar"></div>
+          <div class="fakehero">Site para loja de ferramentas</div>
+        </div>
+        <div class="work-body"><b>Presença digital</b><p>Site institucional com catálogo, WhatsApp e apresentação de produtos.</p></div>
+      </div>
+      <div class="work-card">
+        <div class="work-preview">
+          <div class="fakebar"></div>
+          <div class="fakehero">Catálogo comercial organizado</div>
+        </div>
+        <div class="work-body"><b>Conteúdo e materiais</b><p>Padronização visual, imagens tratadas e descrição clara de produtos.</p></div>
+      </div>
+      <div class="work-card">
+        <div class="work-preview">
+          <div class="fakebar"></div>
+          <div class="fakehero">Mapa de fornecedores e preços</div>
+        </div>
+        <div class="work-body"><b>Pesquisa e cotações</b><p>Comparação técnica, opções de compra e organização para tomada de decisão.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pacotes">
+  <div class="container">
+    <div class="section-head">
+      <h2>Serviços sob medida para o tamanho da sua necessidade.</h2>
+      <p>Em vez de mostrar um preço genérico logo de cara, preferimos entender rapidamente o que você precisa e indicar a opção mais adequada.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="small">PARA QUEM PRECISA COMEÇAR</div>
+        <h3>Presença digital</h3>
+        <p>Uma solução enxuta para quem precisa colocar a empresa no digital de forma profissional.</p>
+        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
+      </div>
+      <div class="card">
+        <div class="small">PARA QUEM QUER MELHORAR A APRESENTAÇÃO</div>
+        <h3>Conteúdo e materiais</h3>
+        <p>Artes, imagens, catálogos e textos pensados para apoiar vendas e comunicação.</p>
+        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
+      </div>
+      <div class="card">
+        <div class="small">PARA QUEM PRECISA GANHAR TEMPO</div>
+        <h3>Pesquisa e cotações</h3>
+        <p>Apoio na busca de fornecedores, comparação e organização das melhores opções.</p>
+        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="orcamento">
+  <div class="container">
+    <div class="section-head">
+      <h2>Confira qual opção combina com o que você precisa.</h2>
+      <p>Responda três perguntas rápidas. Em vez de jogar um valor solto, mostramos qual formato de serviço tende a fazer mais sentido.</p>
+    </div>
+    <div class="quote quote-grid">
+      <div>
+        <label>O que você precisa agora?</label>
+        <select id="service">
+          <option>Um site profissional</option>
+          <option>Melhorar artes, imagens ou materiais</option>
+          <option>Pesquisar fornecedores e organizar cotações</option>
+          <option>Combinar mais de um serviço</option>
+        </select>
+
+        <label>Qual é o tamanho da necessidade?</label>
+        <select id="level">
+          <option>Algo pontual e enxuto</option>
+          <option>Um projeto mais completo</option>
+          <option>Ainda não sei exatamente</option>
+        </select>
+
+        <label>O que pesa mais na sua decisão?</label>
+        <select id="priority">
+          <option>Preço acessível</option>
+          <option>Rapidez</option>
+          <option>Apresentação mais profissional</option>
+          <option>Ter alguém para me orientar</option>
+        </select>
+
+        <div class="checks">
+          <div class="check">✓ Escopo explicado antes</div>
+          <div class="check">✓ Sem pacote desnecessário</div>
+          <div class="check">✓ Atendimento direto</div>
+          <div class="check">✓ Valor alinhado ao projeto</div>
+        </div>
+      </div>
+
+      <div class="result">
+        <div class="small">Ponto de partida</div>
+        <div class="big" style="font-size:1.75rem">Receba uma indicação de formato e valor</div>
+        <p class="small">Cada projeto muda conforme quantidade de páginas, materiais, itens e prazo. Por isso, o valor é informado de forma simples depois de entendermos o básico.</p>
+        <a class="btn btn-primary" href="#contato" style="width:100%;margin-top:10px">Quero conferir valores</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><h2>Um processo simples, do início à entrega.</h2><p>Sem burocracia desnecessária: entendemos a demanda, alinhamos o escopo e seguimos com você até a entrega.</p></div>
+    <div class="steps">
+      <div class="step"><b>01. Conversa inicial</b><span>Você conta o que precisa, mesmo que ainda não tenha tudo definido.</span></div>
+      <div class="step"><b>02. Escopo e valor</b><span>Organizamos o que será feito, o valor e o prazo de forma objetiva.</span></div>
+      <div class="step"><b>03. Desenvolvimento</b><span>O projeto é produzido com alinhamentos curtos para evitar retrabalho.</span></div>
+      <div class="step"><b>04. Entrega e ajustes</b><span>Você recebe o material final e os últimos ajustes combinados.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container contact">
+    <div>
+      <div class="section-head"><h2>Conte o que você precisa.</h2><p>Pode explicar de forma simples. A partir disso, conseguimos indicar o melhor caminho e preparar uma conversa mais objetiva pelo WhatsApp.</p></div>
+    </div>
+    <form class="card" onsubmit="return prepareMessage(event)">
+      <label>Seu nome</label><input id="name" required placeholder="Como podemos chamar você?">
+      <label>Empresa</label><input id="company" placeholder="Nome da empresa">
+      <label>Serviço de interesse</label>
+      <select id="contactService"><option>Site profissional</option><option>Conteúdo e materiais</option><option>Pesquisa e cotação B2B</option><option>Quero combinar mais de um serviço</option></select>
+      <label>Conte um pouco sobre o que precisa</label><textarea id="message" required placeholder="Ex.: preciso de um site para apresentar meus serviços e receber contatos pelo WhatsApp."></textarea>
+      <button class="btn btn-primary" style="width:100%;margin-top:14px">Preparar conversa no WhatsApp</button>
+      <div id="notice" class="notice"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2026 Vionza Soluções. Marca provisória para validação comercial. Tecnologia, clareza e soluções para pequenas empresas.</div>
+</footer>
+
+
+<script>
+const WHATSAPP_NUMBER = "5511988504240"; // substituir por 55 + DDD + número, apenas dígitos
+
+function buildWhatsAppMessage(name, company, service, details, urgency, budget){
+  return `Olá, Vionza Soluções! Meu nome é ${name}.
+Empresa: ${company || 'não informado'}.
+Tenho interesse em: ${service}.
+Urgência: ${urgency}.
+Faixa de investimento: ${budget}.
+Detalhes: ${details}
+
+Gostaria de entender qual solução faz mais sentido para minha necessidade e conferir valores.`;
+}
+
+function openWhatsAppPrefilter(){
+  document.getElementById('waModal').style.display='flex';
+}
+function closeWhatsAppPrefilter(){
+  document.getElementById('waModal').style.display='none';
+}
+function goToWhatsApp(){
+  const need = document.getElementById('waNeed').value;
+  const size = document.getElementById('waSize').value;
+  const when = document.getElementById('waWhen').value;
+  const text = `Olá, Vionza Soluções! Vim pelo site.
+
+Preciso de: ${need}
+Tamanho da necessidade: ${size}
+Quando gostaria de começar: ${when}
+
+Quero entender as opções e conferir valores.`;
+
+  if(WHATSAPP_NUMBER.includes("SEUNUMEROAQUI")){
+    alert("O número do WhatsApp ainda precisa ser configurado no site.");
+    return;
+  }
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank');
+}
+
+function prepareMessage(e){
+  e.preventDefault();
+  const text = buildWhatsAppMessage(
+    document.getElementById('name').value,
+    document.getElementById('company').value,
+    document.getElementById('contactService').value,
+    document.getElementById('message').value,
+    'A combinar',
+    'Quero conferir valores'
+  );
+
+  if(WHATSAPP_NUMBER.includes("SEUNUMEROAQUI")){
+    const n=document.getElementById('notice');
+    n.style.display='block';
+    n.textContent='Formulário pronto. Falta apenas configurar o número real do WhatsApp para abrir a conversa automaticamente.';
+    return false;
+  }
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank');
+  return false;
+}
+</script>
+
+
+<button class="whatsapp-float" onclick="openWhatsAppPrefilter()" aria-label="Falar pelo WhatsApp">☏</button>
+<div class="wa-label">Falar sobre meu projeto</div>
+
+<div class="modal-backdrop" id="waModal" onclick="if(event.target===this) closeWhatsAppPrefilter()">
+  <div class="modal">
+    <button class="close-x" onclick="closeWhatsAppPrefilter()" aria-label="Fechar">×</button>
+    <div class="section-kicker">Antes de abrir o WhatsApp</div>
+    <h3>Conte rapidamente o que você precisa.</h3>
+    <p>São três respostas rápidas para a conversa já começar com contexto.</p>
+
+    <label>Qual necessidade está mais próxima do que você procura?</label>
+    <select id="waNeed">
+      <option>Preciso de um site profissional</option>
+      <option>Preciso melhorar artes, imagens ou materiais</option>
+      <option>Preciso pesquisar fornecedores ou organizar cotações</option>
+      <option>Quero combinar mais de um serviço</option>
+      <option>Ainda não sei qual serviço preciso</option>
+    </select>
+
+    <label>Qual é o tamanho da necessidade?</label>
+    <select id="waSize">
+      <option>Algo pontual e enxuto</option>
+      <option>Um projeto mais completo</option>
+      <option>Quero começar pequeno e evoluir depois</option>
+      <option>Ainda não sei</option>
+    </select>
+
+    <label>Quando gostaria de começar?</label>
+    <select id="waWhen">
+      <option>Assim que possível</option>
+      <option>Nas próximas 2 semanas</option>
+      <option>Este mês</option>
+      <option>Estou apenas pesquisando</option>
+    </select>
+
+    <div class="helper">Essas respostas serão inseridas automaticamente na mensagem do WhatsApp.</div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeWhatsAppPrefilter()">Agora não</button>
+      <button class="btn btn-primary" onclick="goToWhatsApp()">Continuar no WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
