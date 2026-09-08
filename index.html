@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vionza Soluções — Sites, IA e Compras B2B</title>
-<meta name="description" content="Sites profissionais, soluções com IA e pesquisa de fornecedores para pequenas empresas. Tecnologia, clareza e custo acessível.">
+<title>Vionza — Sites e Marketing Digital para Pequenas Empresas</title>
+<meta name="description" content="Criação e melhoria de sites, materiais comerciais e presença digital para pequenas empresas que querem se apresentar melhor e gerar mais oportunidades.">
 <style>
 :root{
   --bg:#07111f; --bg2:#0b1728; --card:#0f2035; --line:#203550;
@@ -119,6 +119,25 @@ display:none;align-items:center;justify-content:center;padding:20px;z-index:80
  .wa-label{display:none}
  .whatsapp-float{right:16px;bottom:16px}
 }
+
+.solution-card{display:flex;flex-direction:column}
+.solution-card .btn{margin-top:auto}
+.solution-label{font-size:.76rem;text-transform:uppercase;letter-spacing:.12em;color:#8fa7bd;font-weight:700;margin-bottom:10px}
+.solution-card h3{font-size:1.35rem}
+.solution-card ul{padding-left:18px;color:var(--muted);font-size:.9rem;margin:0 0 20px}
+.solution-card li{margin:6px 0}
+.portfolio-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.work-card{display:flex;flex-direction:column}
+.work-body{display:flex;flex-direction:column;flex:1}
+.work-body .portfolio-actions{margin-top:auto;padding-top:14px}
+.combo{border:1px solid #29405d;border-radius:24px;padding:32px;background:linear-gradient(120deg,rgba(85,215,255,.055),rgba(124,108,255,.055));display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:center}
+.combo h2{margin:0 0 10px;font-size:clamp(1.8rem,4vw,2.8rem)}
+.combo p{color:var(--muted);margin:0}
+.micro{font-size:.8rem;color:#8292a6}
+@media(max-width:850px){.combo{grid-template-columns:1fr}}
+
+
+
 </style>
 </head>
 <body>
@@ -126,21 +145,21 @@ display:none;align-items:center;justify-content:center;padding:20px;z-index:80
   <div class="container navbar">
     <a class="brand brandmark" href="#"><span class="brand-dot"></span><span>VIONZA</span> SOLUÇÕES</a>
     <div class="menu">
-      <a href="#servicos">Serviços</a><a href="#portfolio">Exemplos</a><a href="#pacotes">Pacotes</a><a href="#orcamento">Orçamento</a><a href="#contato">Contato</a>
+      <a href="#solucoes">Soluções</a><a href="#processo">Como funciona</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
     </div>
-    <a class="btn btn-primary" href="#orcamento">Quero um orçamento</a>
+    <a class="btn btn-primary" href="#solucoes">Escolher uma solução</a>
   </div>
 </nav>
 
 <header class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Sites, conteúdo e apoio comercial para pequenas empresas</div>
-      <h1>Sua empresa mais <span class="gradient">profissional no digital e mais eficiente no dia a dia.</span></h1>
-      <p class="lead">Criamos sites, materiais de divulgação e apoiamos pesquisas de fornecedores para empresas que precisam ganhar tempo, melhorar a apresentação e vender com mais confiança.</p>
+      
+      <h1>Sua empresa mais <span class="gradient">profissional, presente e preparada para vender no digital.</span></h1>
+      <p class="lead">Criamos e melhoramos sites, organizamos sua presença digital e desenvolvemos materiais comerciais para sua empresa transmitir mais confiança e gerar novas oportunidades.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#orcamento">Entender qual serviço faz sentido</a>
-        <a class="btn btn-ghost" href="#servicos">Ver como podemos ajudar</a>
+        <a class="btn btn-primary" href="#solucoes">Escolher uma solução</a>
+        <a class="btn btn-ghost" href="#solucoes">Ver como podemos ajudar</a>
       </div>
     
       <div class="trustbar">
@@ -151,153 +170,66 @@ display:none;align-items:center;justify-content:center;padding:20px;z-index:80
     </div>
     <aside class="hero-card">
       <div class="small">Em que podemos ajudar</div>
-      <div class="metric"><span>🌐 Site e presença digital</span><b>Profissional</b></div>
-      <div class="metric"><span>✦ Conteúdo e materiais</span><b>Prático</b></div>
-      <div class="metric"><span>📊 Pesquisa e cotações</span><b>Organizado</b></div>
-      <div class="metric"><span>💬 Atendimento próximo</span><b>Sem enrolação</b></div>
+      <div class="metric"><span>🌐 Criação de sites</span><b>Profissional</b></div>
+      <div class="metric"><span>⚡ Melhoria de sites</span><b>Estratégica</b></div>
+      <div class="metric"><span>✦ Conteúdo e materiais</span><b>Visual</b></div>
+      <div class="metric"><span>💬 Atendimento próximo</span><b>Direto</b></div>
     </aside>
   </div>
 </header>
 
-<section id="servicos">
+<section id="solucoes">
   <div class="container">
     <div class="section-head">
-      <h2>Soluções simples para necessidades reais da sua empresa.</h2>
-      <p>Você pode começar por um serviço pontual e evoluir aos poucos. A ideia é entregar o que realmente faz sentido para o seu momento.</p>
+      <div class="section-kicker">Soluções</div>
+      <h2>O que você quer melhorar na sua empresa?</h2>
+      <p>Escolha a opção que mais combina com sua necessidade. Sua escolha já direciona a conversa no WhatsApp.</p>
     </div>
     <div class="grid-3">
-      <article class="card">
-        <div class="icon">🌐</div><h3>Sites profissionais</h3>
-        <p>Sites institucionais e páginas de apresentação para deixar sua empresa mais profissional e facilitar pedidos de orçamento e contatos pelo WhatsApp.</p>
-        <span class="tag">Responsivo</span><span class="tag">WhatsApp</span><span class="tag">SEO básico</span>
+      <article class="card solution-card">
+        <div class="solution-label">Quero criar minha presença online</div>
+        
+        <h3>Criação de sites</h3>
+        <p>Sites profissionais para apresentar sua empresa, seus serviços e facilitar novos contatos e pedidos de orçamento.</p>
+        <ul><li>Sites institucionais</li><li>Landing pages</li><li>Catálogos digitais</li><li>Integração com WhatsApp</li></ul>
+        <button class="btn btn-ghost choose-solution" type="button" onclick="openSolutionWhatsApp('Criação de site')">Quero criar meu site →</button>
       </article>
-      <article class="card">
-        <div class="icon">🤖</div><h3>Conteúdo e materiais</h3>
-        <p>Artes, tratamento de imagens, textos, catálogos e materiais comerciais para melhorar a forma como sua empresa se apresenta.</p>
-        <span class="tag">Artes</span><span class="tag">Imagens</span><span class="tag">Textos</span>
+
+      <article class="card solution-card">
+        <div class="solution-label">Já tenho um site, mas quero melhorar</div>
+        
+        <h3>Melhoria e modernização de sites</h3>
+        <p>Revisamos a apresentação do seu site para deixá-lo mais atual, organizado, profissional e preparado para gerar oportunidades.</p>
+        <ul><li>Visual e organização</li><li>Experiência no celular</li><li>Chamadas para ação</li><li>Integração com WhatsApp</li></ul>
+        <button class="btn btn-ghost choose-solution" type="button" onclick="openSolutionWhatsApp('Melhoria ou modernização do meu site')">Quero melhorar meu site →</button>
       </article>
-      <article class="card">
-        <div class="icon">📊</div><h3>Pesquisa e cotação B2B</h3>
-        <p>Pesquisa de fornecedores, comparação de preços e especificações e organização das melhores opções para apoiar suas compras.</p>
-        <span class="tag">Fornecedores</span><span class="tag">Comparação</span><span class="tag">Sourcing</span>
+
+      <article class="card solution-card">
+        <div class="solution-label">Quero apresentar melhor minha empresa</div>
+        
+        <h3>Conteúdo e materiais digitais</h3>
+        <p>Criamos materiais para melhorar a forma como sua empresa apresenta produtos, serviços e diferenciais aos clientes.</p>
+        <ul><li>Catálogos digitais</li><li>Apresentações comerciais</li><li>Tratamento de imagens</li><li>Artes e conteúdo</li></ul>
+        <button class="btn btn-ghost choose-solution" type="button" onclick="openSolutionWhatsApp('Conteúdo e materiais digitais')">Quero melhorar minha apresentação →</button>
       </article>
     </div>
   </div>
 </section>
 
-
-<section id="portfolio">
+<section id="sobre">
   <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Exemplos de aplicação</div>
-      <h2>Uma apresentação melhor já muda a percepção do cliente.</h2>
-      <p>Estes exemplos mostram o tipo de trabalho que podemos desenvolver para pequenos negócios. Os projetos abaixo são demonstrativos e serão substituídos por cases reais conforme a Vionza ganhar clientes.</p>
-    </div>
-    <div class="portfolio-grid">
-      <div class="work-card">
-        <div class="work-preview">
-          <div class="fakebar"></div>
-          <div class="fakehero">Site para loja de ferramentas</div>
-        </div>
-        <div class="work-body"><b>Presença digital</b><p>Site institucional com catálogo, WhatsApp e apresentação de produtos.</p></div>
-      </div>
-      <div class="work-card">
-        <div class="work-preview">
-          <div class="fakebar"></div>
-          <div class="fakehero">Catálogo comercial organizado</div>
-        </div>
-        <div class="work-body"><b>Conteúdo e materiais</b><p>Padronização visual, imagens tratadas e descrição clara de produtos.</p></div>
-      </div>
-      <div class="work-card">
-        <div class="work-preview">
-          <div class="fakebar"></div>
-          <div class="fakehero">Mapa de fornecedores e preços</div>
-        </div>
-        <div class="work-body"><b>Pesquisa e cotações</b><p>Comparação técnica, opções de compra e organização para tomada de decisão.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pacotes">
-  <div class="container">
-    <div class="section-head">
-      <h2>Serviços sob medida para o tamanho da sua necessidade.</h2>
-      <p>Escolha o serviço que mais combina com o que você precisa agora. Se o seu projeto envolver mais de uma solução, podemos combinar os serviços em uma proposta personalizada.</p>
-    </div>
-    <div class="grid-3">
-      <div class="card">
-        <div class="small">PARA QUEM PRECISA COMEÇAR</div>
-        <h3>Presença digital</h3>
-        <p>Uma solução enxuta para quem precisa colocar a empresa no digital de forma profissional.</p>
-        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
-      </div>
-      <div class="card">
-        <div class="small">PARA QUEM QUER MELHORAR A APRESENTAÇÃO</div>
-        <h3>Conteúdo e materiais</h3>
-        <p>Artes, imagens, catálogos e textos pensados para apoiar vendas e comunicação.</p>
-        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
-      </div>
-      <div class="card">
-        <div class="small">PARA QUEM PRECISA GANHAR TEMPO</div>
-        <h3>Pesquisa e cotações</h3>
-        <p>Apoio na busca de fornecedores, comparação e organização das melhores opções.</p>
-        <a class="btn btn-ghost" href="#orcamento" style="margin-top:8px">Confira valores</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="orcamento">
-  <div class="container">
-    <div class="section-head">
-      <h2>Confira qual opção combina com o que você precisa.</h2>
-      <p>Responda três perguntas rápidas. Em vez de jogar um valor solto, mostramos qual formato de serviço tende a fazer mais sentido.</p>
-    </div>
-    <div class="quote quote-grid">
+    <div class="combo">
       <div>
-        <label>O que você precisa agora?</label>
-        <select id="service">
-          <option>Um site profissional</option>
-          <option>Melhorar artes, imagens ou materiais</option>
-          <option>Pesquisar fornecedores e organizar cotações</option>
-          <option>Combinar mais de um serviço</option>
-        </select>
-
-        <label>Qual é o tamanho da necessidade?</label>
-        <select id="level">
-          <option>Algo pontual e enxuto</option>
-          <option>Um projeto mais completo</option>
-          <option>Ainda não sei exatamente</option>
-        </select>
-
-        <label>O que pesa mais na sua decisão?</label>
-        <select id="priority">
-          <option>Preço acessível</option>
-          <option>Rapidez</option>
-          <option>Apresentação mais profissional</option>
-          <option>Ter alguém para me orientar</option>
-        </select>
-
-        <div class="checks">
-          <div class="check">✓ Escopo explicado antes</div>
-          <div class="check">✓ Sem pacote desnecessário</div>
-          <div class="check">✓ Atendimento direto</div>
-          <div class="check">✓ Valor alinhado ao projeto</div>
-        </div>
+        <div class="section-kicker">Vionza Soluções</div>
+        <h2>Uma parceira para fortalecer a presença digital do seu negócio.</h2>
+        <p>Você pode começar criando um site, modernizando o que já possui ou melhorando seus materiais digitais. Estruturamos uma solução clara, com escopo, prazo e valor alinhados antes do início.</p>
       </div>
-
-      <div class="result">
-        <div class="small">Ponto de partida</div>
-        <div class="big" style="font-size:1.75rem">Receba uma indicação de formato e valor</div>
-        <p class="small">Cada projeto muda conforme quantidade de páginas, materiais, itens e prazo. Por isso, o valor é informado de forma simples depois de entendermos o básico.</p>
-        <a class="btn btn-primary" href="#contato" style="width:100%;margin-top:10px">Quero conferir valores</a>
-      </div>
+      <div><a class="btn btn-primary" href="#contato" style="width:100%">Conte o que sua empresa precisa</a></div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="processo">
   <div class="container">
     <div class="section-head"><h2>Um processo simples, do início à entrega.</h2><p>Sem burocracia desnecessária: entendemos a demanda, alinhamos o escopo e seguimos com você até a entrega.</p></div>
     <div class="steps">
@@ -318,21 +250,33 @@ display:none;align-items:center;justify-content:center;padding:20px;z-index:80
       <label>Seu nome</label><input id="name" required placeholder="Como podemos chamar você?">
       <label>Empresa</label><input id="company" placeholder="Nome da empresa">
       <label>Serviço de interesse</label>
-      <select id="contactService"><option>Site profissional</option><option>Conteúdo e materiais</option><option>Pesquisa e cotação B2B</option><option>Quero combinar mais de um serviço</option></select>
-      <label>Conte um pouco sobre o que precisa</label><textarea id="message" required placeholder="Ex.: preciso de um site para apresentar meus serviços e receber contatos pelo WhatsApp."></textarea>
+      <select id="contactService"><option>Criação de site</option><option>Melhoria ou modernização de site</option><option>Conteúdo e materiais digitais</option><option>Quero combinar mais de uma solução</option></select>
+      <label>Conte um pouco sobre o que precisa</label><textarea id="message" required placeholder="Ex.: já tenho um site, mas quero deixá-lo mais moderno e melhorar os contatos pelo WhatsApp."></textarea>
       <button class="btn btn-primary" style="width:100%;margin-top:14px">Preparar conversa no WhatsApp</button>
       <div id="notice" class="notice"></div>
     </form>
   </div>
 </section>
 
-<footer>
-  <div class="container">© 2026 Vionza Soluções. Marca provisória para validação comercial. Tecnologia, clareza e soluções para pequenas empresas.</div>
-</footer>
+<footer><div class="container">© 2026 Vionza</div></footer>
 
 
 <script>
-const WHATSAPP_NUMBER = "5511988504240"; // substituir por 55 + DDD + número, apenas dígitos
+const WHATSAPP_NUMBER = "5511988504240";
+function openSolutionWhatsApp(service){
+  const text = `Olá, Vionza Soluções! Vim pelo site.
+
+Tenho interesse em: ${service}.
+
+Gostaria de explicar melhor minha necessidade e entender como a Vionza pode me ajudar.`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank');
+}
+
+function openDirectWhatsApp(){
+  const text = `Olá, Vionza Soluções! Vim pelo site e gostaria de conversar sobre uma necessidade da minha empresa.`;
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank');
+}
+ // substituir por 55 + DDD + número, apenas dígitos
 
 function buildWhatsAppMessage(name, company, service, details, urgency, budget){
   return `Olá, Vionza Soluções! Meu nome é ${name}.
@@ -342,33 +286,9 @@ Urgência: ${urgency}.
 Faixa de investimento: ${budget}.
 Detalhes: ${details}
 
-Gostaria de entender qual solução faz mais sentido para minha necessidade e conferir valores.`;
+Gostaria de entender qual solução faz mais sentido para minha necessidade.`;
 }
 
-function openWhatsAppPrefilter(){
-  document.getElementById('waModal').style.display='flex';
-}
-function closeWhatsAppPrefilter(){
-  document.getElementById('waModal').style.display='none';
-}
-function goToWhatsApp(){
-  const need = document.getElementById('waNeed').value;
-  const size = document.getElementById('waSize').value;
-  const when = document.getElementById('waWhen').value;
-  const text = `Olá, Vionza Soluções! Vim pelo site.
-
-Preciso de: ${need}
-Tamanho da necessidade: ${size}
-Quando gostaria de começar: ${when}
-
-Quero entender as opções e conferir valores.`;
-
-  if(WHATSAPP_NUMBER.includes("SEUNUMEROAQUI")){
-    alert("O número do WhatsApp ainda precisa ser configurado no site.");
-    return;
-  }
-  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`,'_blank');
-}
 
 function prepareMessage(e){
   e.preventDefault();
@@ -393,48 +313,7 @@ function prepareMessage(e){
 </script>
 
 
-<button class="whatsapp-float" onclick="openWhatsAppPrefilter()" aria-label="Falar pelo WhatsApp">☏</button>
-<div class="wa-label">Falar sobre meu projeto</div>
+<button class="whatsapp-float" onclick="openDirectWhatsApp()" aria-label="Falar pelo WhatsApp">☏</button>
+<div class="wa-label">Falar no WhatsApp</div>
 
-<div class="modal-backdrop" id="waModal" onclick="if(event.target===this) closeWhatsAppPrefilter()">
-  <div class="modal">
-    <button class="close-x" onclick="closeWhatsAppPrefilter()" aria-label="Fechar">×</button>
-    <div class="section-kicker">Antes de abrir o WhatsApp</div>
-    <h3>Conte rapidamente o que você precisa.</h3>
-    <p>São três respostas rápidas para a conversa já começar com contexto.</p>
-
-    <label>Qual necessidade está mais próxima do que você procura?</label>
-    <select id="waNeed">
-      <option>Preciso de um site profissional</option>
-      <option>Preciso melhorar artes, imagens ou materiais</option>
-      <option>Preciso pesquisar fornecedores ou organizar cotações</option>
-      <option>Quero combinar mais de um serviço</option>
-      <option>Ainda não sei qual serviço preciso</option>
-    </select>
-
-    <label>Qual é o tamanho da necessidade?</label>
-    <select id="waSize">
-      <option>Algo pontual e enxuto</option>
-      <option>Um projeto mais completo</option>
-      <option>Quero começar pequeno e evoluir depois</option>
-      <option>Ainda não sei</option>
-    </select>
-
-    <label>Quando gostaria de começar?</label>
-    <select id="waWhen">
-      <option>Assim que possível</option>
-      <option>Nas próximas 2 semanas</option>
-      <option>Este mês</option>
-      <option>Estou apenas pesquisando</option>
-    </select>
-
-    <div class="helper">Essas respostas serão inseridas automaticamente na mensagem do WhatsApp.</div>
-    <div class="modal-actions">
-      <button class="btn btn-ghost" onclick="closeWhatsAppPrefilter()">Agora não</button>
-      <button class="btn btn-primary" onclick="goToWhatsApp()">Continuar no WhatsApp</button>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+</body></html>
